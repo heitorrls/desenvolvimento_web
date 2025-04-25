@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do List</title>
+    <link rel="stylesheet" href="to-do.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-do List</h1>
+      <label for="task">Nova Tarefa</label>
+      <input
+        type="text"
+        name="task"
+        id="task"
+        placeholder="Digite sua tarefa"
+      />
+      <button onclick="addTask()">Adicionar</button>
+      <ul id="taskList">
+        <li>
+          <div class="task-content">
+            <input
+              type="checkbox"
+              class="task-checkbox"
+              onchange="toggleTask(this)"
+            />
+            <span class="task-text">Exemplo de tarefa</span>
+          </div>
+          <button class="remove-btn" onclick="removeTask(this)">Remover</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script src="to-do.js"></script>
+</html>
